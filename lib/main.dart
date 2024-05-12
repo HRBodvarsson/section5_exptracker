@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:section5_exptracker/expenses.dart';
+import 'package:section5_exptracker/widgets/expenses.dart';
 
 void main() {
   runApp(
-  MaterialApp(
+  const MaterialApp(
       home: Expenses(),
     ),
   );
