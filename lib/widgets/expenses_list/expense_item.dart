@@ -32,10 +32,14 @@ class ExpenseItem extends StatelessWidget {
                 const Spacer(),
                 Row(
                   children: [
-                    const Icon(Icons.access_alarms),
-                    const SizedBox(width: 8),
+                    Icon(categoryIcons[expense.category]),
+                    const SizedBox(width: 8),                      
+                    Text(
+                        expense.formatDate),
+                        /* const Spacer(),
                       Text(
-                        DateFormat('HH:mm').format(expense.date)),
+                        DateFormat('HH:mm').format(expense.date)), */
+                        
                   ],
                 ),
               ],
