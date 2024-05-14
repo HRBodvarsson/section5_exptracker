@@ -21,7 +21,7 @@ class Expense {
     required this.amount,
     required this.date,
     required this.category,
-  }) : id = const Uuid().v4() ;
+  }) : id = const Uuid().v4();
 
   final String id;
   final String title;
@@ -32,6 +32,27 @@ class Expense {
   get formatDate {
     return formatter.format(date);
   }
+}
+
+class ExpenseBucket {
+  const ExpenseBucket({
+    required this.category,
+    required this.expenses,
+  });
 
 
+  ExpenseBucket.forCategory(List<Expense> allExpenses, this.category) : expenses = allExpenses.where((expense) => false);
+
+  final Category category;
+  final List<Expense> expenses;
+
+  double get totalExpenses {
+    double sum = 0;
+
+    //for (var i = 0; i < expenses.length; i++)
+    for (final expenses in expenses)
+    { sum += expenses.amount; // sum = sum + expense.amount
+    }
+    return sum; 
+  }
 }

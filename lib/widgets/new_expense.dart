@@ -180,7 +180,7 @@ class _NewExpenseState extends State<NewExpense> {
             ],
           ),
           // const Spacer(),
-          Row(
+          const Row(
             children: [],
           ),
         ],
